@@ -1,5 +1,7 @@
-import { Application, Device, isIOS, isAndroid, View } from "@nativescript/core";
+import { Application, Device, isIOS, isAndroid, View, Image, StackLayout } from "@nativescript/core";
 import { TNSFancyAlert } from '@nstudio/nativescript-fancyalert';
+
+export const apiUrl = "https://fireblocksmp.sdesignshost.gr:25575/"
 
 export class localUtils {
 
@@ -68,7 +70,11 @@ export class localUtils {
 
     public static navigateTo(directory: string) {
         const frame = require('@nativescript/core/ui/frame').Frame.topmost();
-        frame.navigate(directory);
+        frame.navigate({
+            moduleName: directory,
+            animated: false
+        });
+
     }
 
     public static DisplayMessage(messageLevel: MessageLevel, title: string, message: string, buttonmessage: string) {
@@ -189,6 +195,16 @@ export class localUtils {
         } else {
             (element as any).on("loaded", doAnimate);
         }
+    }
+
+    public static getNavBar() {
+        return `<StackLayout orientation="horizontal">
+            <Image id="home-nav" class="nav-btn" src="~/assets/home.png" ontap="goHome"/>
+            <Image id="events-nav" class="nav-btn" src="~/assets/events.png" ontap="goEvents"/>
+            <Image id="chat-nav" class="nav-btn" src="~/assets/chat.png" ontap="goChat"/>
+            <Image id="mood-nav" class="nav-btn" src="~/assets/mood.png" ontap="goMood"/>
+            <Image id="setting-nav" class="nav-btn" src="~/assets/settings.png" ontap="goSettings"/>
+        </StackLayout>`;
     }
 }
 

@@ -1,22 +1,31 @@
-<Page navigatingTo="onNavigatingTo" iosOverflowSafeArea="true" actionBarHidden="true" xmlns="http://schemas.nativescript.org/tns.xsd" backgroundColor="white">
+<Page navigatingTo="onNavigatingTo" iosOverflowSafeArea="true" actionBarHidden="true" xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:map="@nativescript/google-maps" backgroundColor="white">
     <GridLayout rows="*, auto">
         <ScrollView row="0" class="page" orientation="vertical" horizontalAlignment="center" verticalAlignment="top">
-            <StackLayout id="events" horizontalAlignment="center">
-                <Label id="events-title" text="Suggested Events" color="black"/>
-                <StackLayout class="hr-light"></StackLayout>
-                <StackLayout id="event-container" orientation="horizontal">
-                    <Image class="event-image" src="~/assets/music_note.png"/>
-                    <Label class="event-name" text="Art Exhibition"/>
-                    <Label class="event-date" text="June 15, 2024"/>
+            <GridLayout rows="*, auto">
+                <StackLayout row="0" id="events" horizontalAlignment="center">
+                    <Label id="title" text="Suggested Events" color="black"/>
+                    <StackLayout class="hr-light"></StackLayout>
+                    <StackLayout id="event-container" orientation="horizontal">
+                        <Image id="event-image" src="~/assets/art.png"/>
+                        <Label id="event-name" text="Art Exhibition"/>
+                    </StackLayout>
+                    <StackLayout id="event-container" orientation="horizontal">
+                        <Image id="event-image" src="~/assets/sports.png"/>
+                        <Label id="event-name" text="Paok - Trikala Korinthias"/>
+                    </StackLayout>
                 </StackLayout>
-            </StackLayout>
+                <StackLayout row="1" id="mood" horizontalAlignment="center">
+                    <Label id="title" text="Athens Mood" color="black"/>
+                    <StackLayout class="hr-light"></StackLayout>
+                    <map:MapView
+                        id="mapView"
+                        zoom="12">
+                    </map:MapView>
+                </StackLayout>
+            </GridLayout>
         </ScrollView>
         <StackLayout row="1" horizontalAlignment="center" verticalAlignment="bottom" orientation="horizontal" id="navbar">
-            <Image id="home-btn" class="nav-btn" src="~/assets/home.png"/>
-            <Image class="nav-btn" src="~/assets/events.png"/>
-            <Image class="nav-btn" src="~/assets/chat.png"/>
-            <Image class="nav-btn" src="~/assets/mood.png"/>
-            <Image class="nav-btn" src="~/assets/settings.png"/>
+
         </StackLayout>
     </GridLayout>
 </Page>
