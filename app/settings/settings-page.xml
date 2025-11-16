@@ -8,7 +8,7 @@
                     <Button text="Reset Preferences" backgroundColor="#546aa0" tap="reset"/>
                     <Label id="title" text="About Us"/>
                     <StackLayout class="hr-light"></StackLayout>
-                    <Label text="Είμαστε μαθητές της Ελληνογερμανικής Αγωγής με την ομάδα AIFORALL." color="black" fontSize="18" textWrap="true"/>
+                    <Label text="Είμαστε μαθητές Γυμνασίου της Ελληνογερμανικής Αγωγής με την ομάδα AIFORALL." color="black" fontSize="18" textWrap="true"/>
                 </StackLayout>
             </ScrollView>
         </StackLayout>

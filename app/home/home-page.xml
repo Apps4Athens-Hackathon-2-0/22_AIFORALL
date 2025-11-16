@@ -10,8 +10,8 @@
                         <Label id="event-name" text="Art Exhibition"/>
                     </StackLayout>
                     <StackLayout id="event-container" orientation="horizontal">
-                        <Image id="event-image" src="~/assets/sports.png"/>
-                        <Label id="event-name" text="Paok - Trikala Korinthias"/>
+                        <Image id="event-image" src="~/assets/theater.png"/>
+                        <Label id="event-name" text="Theater"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout row="1" id="mood" horizontalAlignment="center">
