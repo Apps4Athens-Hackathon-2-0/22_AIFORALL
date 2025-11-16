@@ -86,6 +86,7 @@ function resetBtns() {
 export function nextBtnTap() {
   localUtils.vibrate(2);
   localUtils.animateOut(nextBtn, "fade", 500);
+  ApplicationSettings.setBoolean('first_time', false)
   setTimeout(() => {
     localUtils.navigateTo("home/home-page");
   }, 1000);

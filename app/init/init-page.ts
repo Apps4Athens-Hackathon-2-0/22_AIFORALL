@@ -15,7 +15,6 @@ export function onNavigatingTo(args: NavigatedData) {
 
   if (first_time) {
     localUtils.navigateTo("welcome/welcome-page")
-    ApplicationSettings.setBoolean('first_time', false)
   }
   else {
     localUtils.navigateTo("home/home-page")
